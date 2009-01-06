@@ -8,10 +8,11 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
 Version: 0.1.0
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 # (fc) 0.1.0-1mdv fix scan directory location
 Patch0: gnome-dvb-daemon-0.1.0-scandir.patch
+Patch1: gnome-dvb-daemon-0.1.0-fix-str-fmt.patch
 License: GPLv3
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
@@ -34,6 +35,7 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 %prep
 %setup -q
 %patch0 -p1 -b .scandir
+%patch1 -p0 -b .str
 
 %build
 %configure2_5x 
