@@ -21,9 +21,11 @@ BuildRequires: intltool
 BuildRequires: sqlite3-devel >= 3.4
 BuildRequires: libGConf2-devel >= 2.6.1
 BuildRequires: dbus-glib-devel >= 0.74
+BuildRequires: gstreamer0.10-plugins-good
 BuildRequires: gstreamer0.10-plugins-bad
 BuildRequires: python-devel
 BuildRequires: vala
+Requires: gstreamer0.10-plugins-good
 Requires: gstreamer0.10-plugins-bad >= 0.10.9
 Requires: dvb-apps
 
