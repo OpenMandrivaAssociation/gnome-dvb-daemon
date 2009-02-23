@@ -8,8 +8,9 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
 Version: 0.1.4
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch: gnome-dvb-daemon-0.1.4-fix-scan-dir.patch
 License: GPLv3
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
@@ -35,6 +36,7 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 #gw the error is in the vala-generated C file
