@@ -1,10 +1,3 @@
-
-%define major 0
-%define soname %{major}.0.0
-%define libnamexine %mklibname baconvideowidget-xine %major
-%define libnamegstreamer %mklibname baconvideowidget-gstreamer %major
-
-
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
 Version: 0.1.7
