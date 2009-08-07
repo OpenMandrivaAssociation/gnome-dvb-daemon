@@ -1,7 +1,7 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
 Version: 0.1.8.1
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 Patch: gnome-dvb-daemon-0.1.8.1-fix-scan-dir.patch
 #gw from bzr, needed to rebuild the vala files
@@ -51,6 +51,9 @@ rm -f src/gnome-dvb-daemon.vala.stamp
 rm -rf $RPM_BUILD_ROOT 
 %makeinstall_std
 %find_lang %name
+%if %_lib != lib
+mv %buildroot%py_puresitedir/gnomedvb/* %buildroot%py_platsitedir/gnomedvb/
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,9 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %name.lang
 %defattr(-,root,root,-)
 %_bindir/*
-%if %_lib != lib
-%py_puresitedir/gnomedvb
-%endif
 %py_platsitedir/gnomedvb
 %_datadir/dbus-1/services/*.service
 %_libdir/totem/plugins/dvb-daemon
