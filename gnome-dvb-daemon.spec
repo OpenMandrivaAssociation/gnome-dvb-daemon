@@ -58,6 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %name.lang
 %defattr(-,root,root,-)
 %_bindir/*
-%py_puresitedir/gnomedvb
+%py_platsitedir/gnomedvb
 %_datadir/dbus-1/services/*.service
 %_libdir/totem/plugins/dvb-daemon
