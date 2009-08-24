@@ -45,9 +45,6 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 rm -rf $RPM_BUILD_ROOT 
 %makeinstall_std
 %find_lang %name
-%if %_lib != lib
-mv %buildroot%py_puresitedir/gnomedvb/* %buildroot%py_platsitedir/gnomedvb/
-%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,6 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %name.lang
 %defattr(-,root,root,-)
 %_bindir/*
-%py_platsitedir/gnomedvb
+%py_puresitedir/gnomedvb
 %_datadir/dbus-1/services/*.service
 %_libdir/totem/plugins/dvb-daemon
