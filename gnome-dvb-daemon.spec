@@ -1,8 +1,8 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
-Version: 0.1.9
+Version: 0.1.10
 Release: %mkrel 1
-Source0: http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Source0: http://launchpad.net/gnome-dvb-daemon/trunk/%version/+download/%{name}/%{name}-%{version}.tar.bz2
 Patch: gnome-dvb-daemon-0.1.8.1-fix-scan-dir.patch
 #gw from bzr, needed to rebuild the vala files
 Patch1: gnome-dvb-daemon-0.1.8.1-vala-api.patch
@@ -12,7 +12,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 URL: http://live.gnome.org/DVBDaemon
 BuildRequires: gstreamer0.10-devel >= 0.10.19
 BuildRequires: gst-rtsp-server-devel >= 0.10.4
-BuildRequires: libgee-devel >= 0.3
+BuildRequires: libgee-devel >= 0.5
 BuildRequires: intltool
 BuildRequires: sqlite3-devel >= 3.4
 BuildRequires: libGConf2-devel >= 2.6.1
@@ -22,10 +22,12 @@ BuildRequires: gstreamer0.10-plugins-bad
 BuildRequires: python-devel
 BuildRequires: python-dbus
 BuildRequires: vala
+BuildRequires: gstreamer0.10-python
 Requires: python-dbus
 Requires: gstreamer0.10-plugins-good
 Requires: gstreamer0.10-plugins-bad >= 0.10.9
 Requires: dvb-apps
+Requires: gstreamer0.10-python
 
 %description
 DVB Daemon is a daemon written in Vala to setup your DVB devices, 
@@ -37,6 +39,8 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 %patch1 -p1
 
 %build
+#gw format string warning in the generated sources (0.1.10)
+%define Werror_cflags %nil
 %configure2_5x  --enable-totem-plugin
 
 %make
