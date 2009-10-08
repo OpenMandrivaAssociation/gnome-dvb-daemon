@@ -1,9 +1,9 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
-Version: 0.1.10
+Version: 0.1.11
 Release: %mkrel 1
-Source0: http://launchpad.net/gnome-dvb-daemon/trunk/%version/+download/%{name}/%{name}-%{version}.tar.bz2
-Patch: gnome-dvb-daemon-0.1.8.1-fix-scan-dir.patch
+Source0: http://launchpad.net/%name/trunk/%version/+download/%name/%{name}/%{name}-%{version}.tar.bz2
+Patch: gnome-dvb-daemon-0.1.11-fix-scan-dir.patch
 #gw from bzr, needed to rebuild the vala files
 Patch1: gnome-dvb-daemon-0.1.8.1-vala-api.patch
 License: GPLv3
@@ -39,8 +39,8 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 %patch1 -p1
 
 %build
-#gw format string warning in the generated sources (0.1.10)
-%define Werror_cflags %nil
+#gw format string warning in the generated sources (0.1.11)
+%define Werror_cflags -Wformat
 %configure2_5x  --enable-totem-plugin
 
 %make
