@@ -20,6 +20,7 @@ BuildRequires: python-devel
 BuildRequires: python-dbus
 BuildRequires: vala
 BuildRequires: gstreamer0.10-python
+BuildRequires: libgudev-devel
 Requires: python-dbus
 Requires: gstreamer0.10-plugins-good
 Requires: gstreamer0.10-plugins-bad >= 0.10.9
