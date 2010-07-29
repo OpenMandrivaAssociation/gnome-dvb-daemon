@@ -1,6 +1,6 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
-Version: 0.1.17
+Version: 0.1.20
 Release: %mkrel 1
 Source0: http://launchpad.net/%name/trunk/%version/+download/%{name}-%{version}.tar.bz2
 License: GPLv3
@@ -18,7 +18,7 @@ BuildRequires: gstreamer0.10-plugins-good
 BuildRequires: gstreamer0.10-plugins-bad
 BuildRequires: python-devel
 BuildRequires: python-dbus
-BuildRequires: vala
+BuildRequires: vala >= 0.9.1
 BuildRequires: gstreamer0.10-python
 BuildRequires: libgudev-devel
 Requires: python-dbus
