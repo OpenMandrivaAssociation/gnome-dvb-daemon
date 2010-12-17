@@ -1,14 +1,14 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
-Version: 0.1.21
-Release: %mkrel 2
+Version: 0.1.22
+Release: %mkrel 1
 Source0: http://launchpad.net/%name/trunk/%version/+download/%{name}-%{version}.tar.bz2
 License: GPLv3
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 URL: http://live.gnome.org/DVBDaemon
 BuildRequires: gstreamer0.10-devel >= 0.10.19
-BuildRequires: gst-rtsp-server-devel >= 0.10.4
+BuildRequires: gst-rtsp-server-devel >= 0.10.7
 BuildRequires: libgee-devel >= 0.5
 BuildRequires: intltool
 BuildRequires: sqlite3-devel >= 3.4
