@@ -1,8 +1,9 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
-Version: 0.1.23
+Version: 0.2.0
 Release: %mkrel 1
-Source0: http://launchpad.net/%name/trunk/%version/+download/%{name}-%{version}.tar.bz2
+Source0: http://ftp.gnome.org/pub/GNOME/sources/gnome-dvb-daemon/%{name}-%{version}.tar.bz2
+Patch0: gnome-dvb-daemon-0.2.0-link.patch
 License: GPLv3
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
@@ -12,11 +13,11 @@ BuildRequires: gst-rtsp-server-devel >= 0.10.7
 BuildRequires: libgee-devel >= 0.5
 BuildRequires: intltool
 BuildRequires: sqlite3-devel >= 3.4
-BuildRequires: libGConf2-devel >= 2.6.1
 BuildRequires: dbus-glib-devel >= 0.74
 BuildRequires: gstreamer0.10-plugins-good
 BuildRequires: gstreamer0.10-plugins-bad
 BuildRequires: python-devel
+BuildRequires: python-gobject-devel
 BuildRequires: python-dbus
 BuildRequires: vala >= 0.11.2
 BuildRequires: gstreamer0.10-python
@@ -33,9 +34,10 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
-%configure2_5x  --enable-totem-plugin
+%configure2_5x  --enable-totem-plugin --with-totem-plugin-dir=%_libdir/totem/plugins
 %make
 
 %install
