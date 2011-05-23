@@ -1,6 +1,6 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
-Version: 0.2.0
+Version: 0.2.1
 Release: %mkrel 1
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gnome-dvb-daemon/%{name}-%{version}.tar.bz2
 Patch0: gnome-dvb-daemon-0.2.0-link.patch
