@@ -6,7 +6,6 @@ License: GPLv3
 Group: Video
 URL: http://live.gnome.org/DVBDaemon
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gnome-dvb-daemon/%{name}-%{version}.tar.xz
-Patch0: gnome-dvb-daemon-0.2.0-link.patch
 
 BuildRequires: gstreamer0.10-plugins-good
 BuildRequires: gstreamer0.10-plugins-bad
@@ -35,7 +34,7 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 
 %prep
 %setup -q
-%patch0 -p0
+%apply_patches
 
 %build
 %configure2_5x  \
