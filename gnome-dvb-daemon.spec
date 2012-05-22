@@ -7,7 +7,7 @@ Group: Video
 URL: http://live.gnome.org/DVBDaemon
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gnome-dvb-daemon/%{name}-%{version}.tar.xz
 
-BuildRequires: gstreamer0.10-plugins-good
+BuildRequires: gstreamer0.10-plugins-bad
 BuildRequires: gstreamer0.10-plugins-good
 BuildRequires: gstreamer0.10-tools
 BuildRequires: intltool
