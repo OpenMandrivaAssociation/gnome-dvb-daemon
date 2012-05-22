@@ -12,7 +12,8 @@ BuildRequires: gstreamer0.10-plugins-good
 BuildRequires: gstreamer0.10-tools
 BuildRequires: intltool
 BuildRequires: python-dbus
-BuildRequires: vala >= 0.11.2
+BuildRequires: totem
+BuildRequires: vala
 BuildRequires: pkgconfig(dbus-glib-1)
 BuildRequires: pkgconfig(gee-1.0)
 BuildRequires: pkgconfig(gstreamer-0.10)
