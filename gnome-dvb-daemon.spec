@@ -12,7 +12,7 @@ BuildRequires: gstreamer0.10-plugins-good
 BuildRequires: gstreamer0.10-tools
 BuildRequires: intltool
 BuildRequires: python-dbus
-BuildRequires: totem
+#BuildRequires: totem
 BuildRequires: vala
 BuildRequires: pkgconfig(dbus-glib-1)
 BuildRequires: pkgconfig(gee-1.0)
@@ -40,7 +40,7 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 
 %build
 %configure2_5x  \
-	--enable-totem-plugin 
+	--enable-totem-plugin \
 	--with-totem-plugin-dir=%{_libdir}/totem/plugins
 
 %make
