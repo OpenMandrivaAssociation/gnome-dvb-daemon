@@ -36,7 +36,7 @@ record TV shows and browse EPG. It can be controlled via its D-Bus interface.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure2_5x  \
