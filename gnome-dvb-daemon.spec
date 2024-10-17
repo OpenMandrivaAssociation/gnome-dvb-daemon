@@ -4,7 +4,7 @@ Version: 0.2.9
 Release: 2
 License: GPLv3
 Group: Video
-URL: http://live.gnome.org/DVBDaemon
+URL: https://live.gnome.org/DVBDaemon
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gnome-dvb-daemon/%{name}-%{version}.tar.xz
 
 BuildRequires: gstreamer0.10-plugins-bad
