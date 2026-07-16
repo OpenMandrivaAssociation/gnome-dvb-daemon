@@ -1,7 +1,7 @@
 Summary: DVB Daemon for GNOME
 Name: gnome-dvb-daemon
 Version: 0.2.9
-Release: 2
+Release: 3
 License: GPLv3
 Group: Video
 URL: https://live.gnome.org/DVBDaemon
